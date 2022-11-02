@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archivoInstalacion>
+    <instalacion>
+        <dimensiones>20 x 25</dimensiones>
+        <fecha>2020-12-04T20:15:34.289-05:00</fecha>
+        <pid>2345678</pid>
+        <precioRef>71000.0</precioRef>
+        <titulo>El principito</titulo>
+        <descripcion>Bonita</descripcion>
+    </instalacion>
+</archivoInstalacion>

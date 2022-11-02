@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1033.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proyectoFx.view.controller.ControladorInterfaz">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="687.0" prefWidth="1033.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Obras">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="927.0">
+                     <children>
+                        <ImageView fx:id="fondoObras" fitHeight="693.0" fitWidth="1055.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@fondo%20obras.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="448.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obras Disponibles" textAlignment="CENTER" wrappingWidth="171.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="383.0" layoutY="59.0" prefHeight="306.0" prefWidth="287.0" style="-fx-background-color: #520c90;">
+                           <children>
+                              <TextField fx:id="busquedaObrasTexto" layoutX="11.0" layoutY="138.0" prefHeight="31.0" prefWidth="265.0" />
+                              <Button fx:id="busquedaObras" layoutX="190.0" layoutY="236.0" mnemonicParsing="false" onAction="#buscarObra" prefHeight="30.0" prefWidth="86.0" text="Buscar" />
+                              <ChoiceBox fx:id="busquedaO" layoutX="14.0" layoutY="24.0" prefHeight="32.0" prefWidth="227.0" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="432.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busqueda de Obras" textAlignment="CENTER" wrappingWidth="179.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane fx:id="paneInsertarObra" layoutX="21.0" layoutY="54.0" prefHeight="574.0" prefWidth="326.0" style="-fx-background-color: #7d2405;">
+                           <children>
+                              <TabPane layoutX="-1.0" prefHeight="572.0" prefWidth="327.0" tabClosingPolicy="UNAVAILABLE">
+                                <tabs>
+                                  <Tab text="Escultura">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pid:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="pidEscultura" layoutX="14.0" layoutY="25.0" />
+                                                <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="tituloEscultura" layoutX="14.0" layoutY="82.0" />
+                                                <Text layoutX="14.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="precioEscultura" layoutX="14.0" layoutY="203.0" />
+                                                <Text layoutX="14.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimensiones:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="dimensionesEscultura" layoutX="14.0" layoutY="267.0" />
+                                                <Text layoutX="14.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del material: " wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="nombreMaterialEscultura" layoutX="14.0" layoutY="328.0" />
+                                                <DatePicker fx:id="fechaEscultura" layoutX="14.0" layoutY="144.0" prefWidth="191.0" />
+                                                <Text layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                                                <Text layoutX="14.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción del material: " wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="descripcionMaterialEscultura" layoutX="14.0" layoutY="390.0" />
+                                                <Text layoutX="14.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peso:" wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="pesoEscultura" layoutX="14.0" layoutY="450.0" />
+                                                <Button fx:id="insertarEscultura" layoutX="240.0" layoutY="495.0" mnemonicParsing="false" onAction="#insertarEscultura" text="Insertar" />
+                                                <Button fx:id="modificarEscultura" layoutX="148.0" layoutY="495.0" mnemonicParsing="false" onAction="#modificarEscultura" text="Modificar" />
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Instalación">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pid:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="pidInstalacion" layoutX="14.0" layoutY="25.0" />
+                                                <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="tituloInstalacion" layoutX="14.0" layoutY="82.0" />
+                                                <Text layoutX="14.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="precioInstalacion" layoutX="14.0" layoutY="203.0" />
+                                                <Text layoutX="14.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimensiones:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="dimensionesInstalacion" layoutX="14.0" layoutY="267.0" />
+                                                <Text layoutX="14.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción:" wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="descripcionInstalacion" layoutX="14.0" layoutY="328.0" />
+                                                <DatePicker fx:id="fechaInstalacion" layoutX="14.0" layoutY="144.0" prefWidth="191.0" />
+                                                <Text layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                                                <Button fx:id="insertarInstalacion" layoutX="240.0" layoutY="488.0" mnemonicParsing="false" onAction="#insertarInstalacion" text="Insertar" />
+                                                <Button fx:id="modificarInstalacion" layoutX="147.0" layoutY="488.0" mnemonicParsing="false" onAction="#modificarInstalacion" text="Modificar" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Cuadro">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <Text layoutX="14.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pid:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="pidCuadro" layoutX="14.0" layoutY="25.0" />
+                                                <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="tituloCuadro" layoutX="14.0" layoutY="82.0" />
+                                                <Text layoutX="14.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="precioCuadro" layoutX="14.0" layoutY="203.0" />
+                                                <Text layoutX="14.0" layoutY="262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimensiones:" wrappingWidth="100.6708984375" />
+                                                <TextField fx:id="dimensionesCuadro" layoutX="14.0" layoutY="267.0" />
+                                                <Text layoutX="14.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tema:" wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="temaCuadro" layoutX="14.0" layoutY="328.0" />
+                                                <DatePicker fx:id="fechaCuadro" layoutX="14.0" layoutY="144.0" prefWidth="191.0" />
+                                                <Text layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                                                <Text layoutX="14.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Técnica:" wrappingWidth="177.6708984375" />
+                                                <TextField fx:id="tecnicaCuadro" layoutX="14.0" layoutY="390.0" />
+                                                <Text layoutX="14.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clasificación:" wrappingWidth="177.6708984375" />
+                                                <Button fx:id="insertarCuadro" layoutX="240.0" layoutY="495.0" mnemonicParsing="false" onAction="#insertarCuadro" text="Insertar" />
+                                                <ChoiceBox fx:id="clasificacionCuadro" layoutX="14.0" layoutY="457.0" prefHeight="31.0" prefWidth="190.0" />
+                                                <Button fx:id="modificarCuadro" layoutX="148.0" layoutY="495.0" mnemonicParsing="false" onAction="#modificarCuadro" text="Modificar" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="123.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Obra" textAlignment="CENTER" wrappingWidth="124.2998046875">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="719.0" layoutY="59.0" prefHeight="561.0" prefWidth="302.0" style="-fx-background-color: #74b0c2;">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="65.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Cuadros.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="64.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pid:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="pidObra" layoutX="64.0" layoutY="209.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="tituloObra" layoutX="64.0" layoutY="267.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="fechaObra" layoutX="64.0" layoutY="319.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="precioObra" layoutX="64.0" layoutY="367.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dimensiones:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="dimensionesObra" layoutX="64.0" layoutY="418.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Button fx:id="eliminarObra" layoutX="119.0" layoutY="505.0" mnemonicParsing="false" onAction="#eliminarObra" prefHeight="31.0" prefWidth="82.0" text="Eliminar" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="775.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de la obra" textAlignment="CENTER" wrappingWidth="209.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tableObras" layoutX="370.0" layoutY="420.0" prefHeight="205.0" prefWidth="336.0">
+                          <columns>
+                            <TableColumn fx:id="tablePid" prefWidth="75.0" text="Pid" />
+                            <TableColumn fx:id="tableTitulo" prefWidth="148.0" text="Titulo" />
+                              <TableColumn fx:id="tablePrecio" prefWidth="112.0" text="Precio" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Artistas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="fondoArtistas" fitHeight="668.0" fitWidth="1173.0" layoutX="-5.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@fondo%20artista.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="119.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artistas más vendidos" textAlignment="CENTER" wrappingWidth="223.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="517.0" layoutY="52.0" prefHeight="508.0" prefWidth="473.0" style="-fx-background-color: #74b0c2;">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="187.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Pintor.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="74.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" />
+                              <Label fx:id="codigoArtista" layoutX="74.0" layoutY="205.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                              <Text layoutX="74.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula:" />
+                              <Label fx:id="cedulaArtista" layoutX="74.0" layoutY="254.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                              <Text layoutX="74.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+                              <Label fx:id="nombreArtista" layoutX="74.0" layoutY="303.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                              <Text layoutX="74.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" />
+                              <Label fx:id="apellidosArtista" layoutX="74.0" layoutY="352.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                              <Text layoutX="74.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de nacimiento:" />
+                              <Label fx:id="fechaArtista" layoutX="74.0" layoutY="399.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                              <Text layoutX="74.0" layoutY="443.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:" />
+                              <Label fx:id="telefonoArtista" layoutX="74.0" layoutY="448.0" prefHeight="21.0" prefWidth="115.0" text="Label" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="642.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información del artista" textAlignment="CENTER" wrappingWidth="223.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tableArtista" layoutX="28.0" layoutY="55.0" prefHeight="508.0" prefWidth="476.0">
+                          <columns>
+                            <TableColumn fx:id="tableCodigoA" prefWidth="75.0" text="Código" />
+                            <TableColumn fx:id="tableCedulaA" prefWidth="75.0" text="Cédula" />
+                              <TableColumn fx:id="tableNombresA" prefWidth="89.0" text="Nombres" />
+                              <TableColumn fx:id="tableApellidosA" prefWidth="81.0" text="Apellidos" />
+                              <TableColumn fx:id="tableFechaA" prefWidth="155.0" text="Fecha de nacimiento" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Clientes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="927.0">
+                     <children>
+                        <ImageView fx:id="fondoClientes" fitHeight="710.0" fitWidth="1154.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@fondo%20clientes.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="444.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes Registrados" textAlignment="CENTER" wrappingWidth="175.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="383.0" layoutY="59.0" prefHeight="170.0" prefWidth="287.0" style="-fx-background-color: #ffdd9a;">
+                           <children>
+                              <TextField fx:id="busquedaClientes" layoutX="11.0" layoutY="55.0" prefHeight="31.0" prefWidth="265.0" />
+                              <Button fx:id="busquedaClientesBoton" layoutX="190.0" layoutY="124.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="30.0" prefWidth="86.0" text="Buscar" />
+                              <Text layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite el código del cliente" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="432.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busqueda de Clientes" textAlignment="CENTER" wrappingWidth="197.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="21.0" layoutY="54.0" prefHeight="574.0" prefWidth="326.0" style="-fx-background-color: #7d2405;">
+                           <children>
+                              <TextField fx:id="nombresCliente" layoutX="7.0" layoutY="166.0" />
+                           </children></Pane>
+                        <Text fill="WHITE" layoutX="112.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insertar Cliente" textAlignment="CENTER" wrappingWidth="142.2998046875">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="719.0" layoutY="59.0" prefHeight="561.0" prefWidth="302.0" style="-fx-background-color: #74b0c2;">
+                           <children>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="90.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Usuario.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="64.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lCodigoCliente" layoutX="64.0" layoutY="209.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lCedulaCliente" layoutX="64.0" layoutY="267.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lNombresCliente" layoutX="64.0" layoutY="319.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="362.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lApellidosCliente" layoutX="64.0" layoutY="367.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="413.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lDireccionCliente" layoutX="64.0" layoutY="418.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Button fx:id="modificarCliente" layoutX="64.0" layoutY="505.0" mnemonicParsing="false" onAction="#modificarCliente" text="Modificar" />
+                              <Button fx:id="eliminarCliente" layoutX="165.0" layoutY="505.0" mnemonicParsing="false" onAction="#eliminarCliente" prefHeight="31.0" prefWidth="82.0" text="Eliminar" />
+                              <Text layoutX="64.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lTelefonoCliente" layoutX="64.0" layoutY="463.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                           </children>
+                        </Pane>
+                        <Text layoutX="28.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código:" wrappingWidth="100.6708984375" />
+                        <TextField fx:id="codigoCliente" layoutX="28.0" layoutY="98.0" />
+                        <Text layoutX="28.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cédula:" wrappingWidth="100.6708984375" />
+                        <TextField fx:id="cedulaCliente" layoutX="28.0" layoutY="155.0" />
+                        <Text layoutX="28.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos:" wrappingWidth="100.6708984375" />
+                        <TextField fx:id="apellidosCliente" layoutX="28.0" layoutY="276.0" />
+                        <Text layoutX="28.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección:" wrappingWidth="100.6708984375" />
+                        <TextField fx:id="direccionCliente" layoutX="28.0" layoutY="340.0" />
+                        <Text layoutX="28.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teléfono:" wrappingWidth="177.6708984375" />
+                        <TextField fx:id="telefonoCliente" layoutX="28.0" layoutY="401.0" />
+                        <Text layoutX="28.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombres:" wrappingWidth="100.6708984375" />
+                        <Button fx:id="insertarCliente" layoutX="254.0" layoutY="561.0" mnemonicParsing="false" onAction="#insertarCliente" text="Insertar" />
+                        <Text fill="WHITE" layoutX="771.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información Cliente" textAlignment="CENTER" wrappingWidth="197.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tableCliente" layoutX="358.0" layoutY="301.0" prefHeight="314.0" prefWidth="347.0">
+                          <columns>
+                            <TableColumn fx:id="tableCodigoC" prefWidth="75.0" text="Código" />
+                            <TableColumn fx:id="tableCedulaC" prefWidth="75.0" text="Cédula" />
+                              <TableColumn fx:id="tableNombresC" prefWidth="96.0" text="Nombres" />
+                              <TableColumn fx:id="tableApellidosC" prefWidth="100.0" text="Apellidos" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Compras">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="927.0">
+                     <children>
+                        <ImageView fx:id="fondoCompras" fitHeight="717.0" fitWidth="1153.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@fondo%20compras.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="444.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compras Existentes" textAlignment="CENTER" wrappingWidth="175.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="383.0" layoutY="59.0" prefHeight="170.0" prefWidth="287.0" style="-fx-background-color: #520c90;">
+                           <children>
+                              <Button fx:id="busquedaCompraB" layoutX="190.0" layoutY="124.0" mnemonicParsing="false" onAction="#buscarCompra" prefHeight="30.0" prefWidth="86.0" text="Buscar" />
+                              <Text fill="WHITE" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite el número de pedido " />
+                              <TextField fx:id="busquedaCompra" layoutX="14.0" layoutY="46.0" prefHeight="31.0" prefWidth="259.0" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="432.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busqueda de Compras" textAlignment="CENTER" wrappingWidth="199.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="21.0" layoutY="54.0" prefHeight="574.0" prefWidth="326.0" style="-fx-background-color: #7d2405;">
+                           <children>
+                              <TextField fx:id="codigoClienteCompra" layoutX="7.0" layoutY="164.0" />
+                              <DatePicker fx:id="fechaCompra" layoutX="5.0" layoutY="47.0" prefHeight="31.0" prefWidth="188.0" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="101.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Realizar Compra" textAlignment="CENTER" wrappingWidth="155.2998046875">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="719.0" layoutY="59.0" prefHeight="431.0" prefWidth="302.0" style="-fx-background-color: #74b0c2;">
+                           <children>
+                              <ImageView fitHeight="99.0" fitWidth="122.0" layoutX="92.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Carrito.png" />
+                                 </image>
+                              </ImageView>
+                              <Text layoutX="64.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de pedido:" wrappingWidth="138.6708984375" />
+                              <Label fx:id="numeroPedido" layoutX="64.0" layoutY="153.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="lfechaCompra" layoutX="64.0" layoutY="202.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del repartidor:" wrappingWidth="165.6708984375" />
+                              <Label fx:id="lNombreRepartidor" layoutX="64.0" layoutY="250.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="clienteCompra" layoutX="64.0" layoutY="299.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Text layoutX="64.0" layoutY="347.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Obra:" wrappingWidth="100.6708984375" />
+                              <Label fx:id="obraCompra" layoutX="64.0" layoutY="351.0" prefHeight="21.0" prefWidth="202.0" text="Label" />
+                              <Button fx:id="eliminarCompra" layoutX="114.0" layoutY="387.0" mnemonicParsing="false" onAction="#eliminarCompra" prefHeight="31.0" prefWidth="82.0" text="Eliminar" />
+                           </children>
+                        </Pane>
+                        <Text layoutX="28.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha:" wrappingWidth="100.6708984375" />
+                        <Text layoutX="28.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de repartidor:" wrappingWidth="201.6708984375" />
+                        <TextField fx:id="nombreRepartidorCompra" layoutX="27.0" layoutY="161.0" />
+                        <Text layoutX="28.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pid obra" wrappingWidth="100.6708984375" />
+                        <TextField fx:id="pidObraCompra" layoutX="28.0" layoutY="276.0" />
+                        <Text layoutX="28.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Código del cliente" wrappingWidth="162.6708984375" />
+                        <Button fx:id="insertarCompra" layoutX="254.0" layoutY="561.0" mnemonicParsing="false" onAction="#insertarCompra" text="Insertar" />
+                        <Text fill="WHITE" layoutX="782.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Ganancias" textAlignment="CENTER" wrappingWidth="175.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Label fx:id="totalGanancias" alignment="CENTER" layoutX="719.0" layoutY="534.0" prefHeight="85.0" prefWidth="307.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Text fill="WHITE" layoutX="767.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información Compra" textAlignment="CENTER" wrappingWidth="199.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tableCompra" layoutX="356.0" layoutY="292.0" prefHeight="324.0" prefWidth="355.0">
+                          <columns>
+                            <TableColumn fx:id="tableNumero" prefWidth="82.0" text="Número " />
+                            <TableColumn fx:id="tableFecha" prefWidth="81.0" text="Fecha" />
+                              <TableColumn fx:id="tableClienteCompra" prefWidth="91.0" text="Cliente" />
+                              <TableColumn fx:id="tableObraCompra" prefWidth="100.0" text="Obra" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Reportes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="927.0">
+                     <children>
+                        <ImageView fx:id="fondoCompras1" fitHeight="717.0" fitWidth="1153.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@fondo%20compras.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="444.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compras Existentes" textAlignment="CENTER" wrappingWidth="175.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Pane layoutX="383.0" layoutY="59.0" prefHeight="170.0" prefWidth="287.0" style="-fx-background-color: #520c90;">
+                           <children>
+                              <Button fx:id="busquedaCompraB1" layoutX="190.0" layoutY="124.0" mnemonicParsing="false" onAction="#buscarCompraR" prefHeight="30.0" prefWidth="86.0" text="Buscar" />
+                              <Text fill="WHITE" layoutX="14.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite el año " />
+                              <TextField fx:id="anioCompra" layoutX="14.0" layoutY="39.0" prefHeight="31.0" prefWidth="128.0" />
+                              <Text fill="WHITE" layoutX="14.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digite el mes " />
+                              <TextField fx:id="mesCompra" layoutX="14.0" layoutY="96.0" prefHeight="31.0" prefWidth="128.0" />
+                           </children>
+                        </Pane>
+                        <Text fill="WHITE" layoutX="432.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Busqueda de Compras" textAlignment="CENTER" wrappingWidth="199.6708984375">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="verEsculturas" layoutX="46.0" layoutY="24.0" mnemonicParsing="false" onAction="#verEsculturas" prefHeight="31.0" prefWidth="278.0" text="Ver Esculturas" />
+                        <Button fx:id="comprasCuadro" layoutX="733.0" layoutY="24.0" mnemonicParsing="false" onAction="#comprasCuadro" prefHeight="31.0" prefWidth="278.0" text="Compras Cuadro" />
+                        <TableView fx:id="tableReporte" layoutX="365.0" layoutY="280.0" prefHeight="342.0" prefWidth="343.0">
+                           <columns>
+                              <TableColumn fx:id="tableNumeroR" prefWidth="82.0" text="Número " />
+                              <TableColumn fx:id="tableFechaR" prefWidth="81.0" text="Fecha" />
+                              <TableColumn fx:id="tableClienteCompraR" prefWidth="91.0" text="Cliente" />
+                              <TableColumn fx:id="tableObraCompraR" prefWidth="100.0" text="Obra" />
+                           </columns>
+                        </TableView>
+                        <TableView fx:id="tableVerEsculturas" layoutX="16.0" layoutY="59.0" prefHeight="572.0" prefWidth="335.0">
+                          <columns>
+                            <TableColumn fx:id="tableTituloE" prefWidth="111.0" text="Titulo" />
+                            <TableColumn fx:id="tablePrecioE" prefWidth="120.0" text="Precio" />
+                              <TableColumn fx:id="tablePesoE" prefWidth="103.0" text="Peso" />
+                          </columns>
+                        </TableView>
+                        <TableView fx:id="tableComprasCuadro" layoutX="719.0" layoutY="59.0" prefHeight="563.0" prefWidth="310.0">
+                          <columns>
+                            <TableColumn fx:id="tableNumeroR1" prefWidth="75.0" text="Número" />
+                            <TableColumn fx:id="tableClienteR" prefWidth="111.0" text="Cliente" />
+                              <TableColumn fx:id="tableObraR" prefWidth="121.0" text="Obra" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

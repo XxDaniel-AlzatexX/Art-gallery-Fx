@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archivoEscultura>
+    <escultura>
+        <dimensiones>12 x 28</dimensiones>
+        <fecha>2020-12-17T20:14:40.079-05:00</fecha>
+        <pid>3456789</pid>
+        <precioRef>52000.0</precioRef>
+        <titulo>Escuadron</titulo>
+        <material>
+            <descripcion>Usado</descripcion>
+            <nombre>Cobre</nombre>
+        </material>
+        <peso>20.0</peso>
+    </escultura>
+</archivoEscultura>

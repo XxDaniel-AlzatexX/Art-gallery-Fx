@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archivoArtista>
+    <artistas>
+        <entry>
+            <key>123456723</key>
+            <value>
+                <apellidos>Robledo Garzon</apellidos>
+                <cedula>123456723</cedula>
+                <codigoArtista>2345</codigoArtista>
+                <fechaDeNacimiento>1904-06-18T00:00:00-04:56</fechaDeNacimiento>
+                <nombres>Juan David</nombres>
+                <telefono>314112235</telefono>
+            </value>
+        </entry>
+        <entry>
+            <key>123423457</key>
+            <value>
+                <apellidos>Chafloque Mesia</apellidos>
+                <cedula>123423457</cedula>
+                <codigoArtista>4567</codigoArtista>
+                <fechaDeNacimiento>1905-11-04T00:00:00-04:56</fechaDeNacimiento>
+                <nombres>Martin</nombres>
+                <telefono>314124546</telefono>
+            </value>
+        </entry>
+        <entry>
+            <key>123456789</key>
+            <value>
+                <apellidos>Alzate Mateus</apellidos>
+                <cedula>123456789</cedula>
+                <codigoArtista>1234</codigoArtista>
+                <fechaDeNacimiento>1901-01-01T00:00:00-04:56</fechaDeNacimiento>
+                <nombres>Daniel Felipe</nombres>
+                <telefono>314123545</telefono>
+            </value>
+        </entry>
+        <entry>
+            <key>123456356</key>
+            <value>
+                <apellidos>Granados Romero</apellidos>
+                <cedula>123456356</cedula>
+                <codigoArtista>3456</codigoArtista>
+                <fechaDeNacimiento>1910-08-04T00:00:00-04:56</fechaDeNacimiento>
+                <nombres>Tania Lorena</nombres>
+                <telefono>314134556</telefono>
+            </value>
+        </entry>
+    </artistas>
+</archivoArtista>

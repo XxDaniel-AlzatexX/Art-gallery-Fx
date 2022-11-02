@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<archivoCliente>
+    <clientes>
+        <entry>
+            <key>123451363</key>
+            <value>
+                <apellidos>Fernandez Hernandez</apellidos>
+                <cedula>123451363</cedula>
+                <codigoCliente>3333</codigoCliente>
+                <direccionEntrega>Cr50</direccionEntrega>
+                <nombres>Joel</nombres>
+                <telefono>3008514</telefono>
+            </value>
+        </entry>
+        <entry>
+            <key>123453457</key>
+            <value>
+                <apellidos>Jimenez Blanco</apellidos>
+                <cedula>123453457</cedula>
+                <codigoCliente>2222</codigoCliente>
+                <direccionEntrega>Cr200</direccionEntrega>
+                <nombres>Luz Maria</nombres>
+                <telefono>3005642</telefono>
+            </value>
+        </entry>
+        <entry>
+            <key>123456789</key>
+            <value>
+                <apellidos>Ramirez Mesa</apellidos>
+                <cedula>123456789</cedula>
+                <codigoCliente>1111</codigoCliente>
+                <direccionEntrega>Cr100</direccionEntrega>
+                <nombres>Pedro Antonio</nombres>
+                <telefono>3005963</telefono>
+            </value>
+        </entry>
+    </clientes>
+</archivoCliente>
